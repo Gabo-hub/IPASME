@@ -1,0 +1,604 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ContrlEntrada</class>
+ <widget class="QDialog" name="ContrlEntrada">
+  <property name="windowModality">
+   <enum>Qt::WindowModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>808</width>
+    <height>444</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Control De Inventario (Entrada)</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="../assets/resources.qrc">
+    <normaloff>:/logo_ipasme/icons/IPASME-logo-DABC2AE9B1-seeklogo.com.png</normaloff>:/logo_ipasme/icons/IPASME-logo-DABC2AE9B1-seeklogo.com.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(177, 214, 166);</string>
+  </property>
+  <property name="windowFilePath">
+   <string/>
+  </property>
+  <layout class="QGridLayout" name="gridLayout_3">
+   <item row="2" column="0">
+    <layout class="QGridLayout" name="gridLayout_2">
+     <item row="0" column="0">
+      <widget class="QLabel" name="ql_CtrlEntrada_tipo">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(223, 223, 223);
+color: rgb(0, 0, 0);</string>
+       </property>
+       <property name="text">
+        <string>Tipo:</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="2">
+      <widget class="QLabel" name="ql_CtrlEntrada_sede">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(223, 223, 223);
+color: rgb(0, 0, 0);</string>
+       </property>
+       <property name="text">
+        <string>Sede:</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="3">
+      <widget class="QLineEdit" name="qlinee_CtrlEntrada_cantidad">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(255, 255, 255);</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="0">
+      <widget class="QLabel" name="ql_CtrlEntrada_fechaingreso">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(223, 223, 223);
+color: rgb(0, 0, 0);</string>
+       </property>
+       <property name="text">
+        <string> Fecha de Ingreso: </string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="1">
+      <widget class="QLineEdit" name="qlinee_CtrlEntrada_fechaingreso">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(255, 255, 255);</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QComboBox" name="cbox_CtrlEntrada_tipo">
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(255, 255, 255);</string>
+       </property>
+       <property name="currentIndex">
+        <number>0</number>
+       </property>
+       <item>
+        <property name="text">
+         <string>Bienes</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Servicios</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Medicamentos</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Insumos Medicos</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QLineEdit" name="qlinee_CtrlEntrada_actnombre">
+       <property name="focusPolicy">
+        <enum>Qt::StrongFocus</enum>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(255, 255, 255);</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="2">
+      <widget class="QLabel" name="ql_CtrlEntrada_cantidad">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(223, 223, 223);
+color: rgb(0, 0, 0);</string>
+       </property>
+       <property name="text">
+        <string> Cantidad: </string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="ql_CtrlEntrada_numactivo">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(223, 223, 223);
+color: rgb(0, 0, 0);</string>
+       </property>
+       <property name="text">
+        <string>N°Activo:</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="3">
+      <widget class="QComboBox" name="cbox_CtrlEntrada_sede">
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(255, 255, 255);</string>
+       </property>
+       <item>
+        <property name="text">
+         <string>Maracay 1 (PRINCIPAL)</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Maracay 2 (SAN JACINTO)</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Maracay (A.MEDICA)</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item row="5" column="1">
+      <widget class="QLineEdit" name="qlinee_CtrlEntrada_totalxunidad">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(255, 255, 255);</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="ql_CtrlEntrada_actnombre">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(223, 223, 223);
+color: rgb(0, 0, 0);</string>
+       </property>
+       <property name="text">
+        <string>Activo: Nombre:</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="0">
+      <widget class="QLabel" name="ql_CtrlEntrada_unidadxmedida">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(223, 223, 223);
+color: rgb(0, 0, 0);</string>
+       </property>
+       <property name="text">
+        <string> Unidad de Medida: </string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="0">
+      <widget class="QLabel" name="ql_CtrlEntrada_totalxunidad">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(223, 223, 223);
+color: rgb(0, 0, 0);</string>
+       </property>
+       <property name="text">
+        <string>Total x Unidad:</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="1">
+      <widget class="QComboBox" name="cbox_CtrlEntrada_sede_2">
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(255, 255, 255);</string>
+       </property>
+       <item>
+        <property name="text">
+         <string>Cajas</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Frescos</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Unidad</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Bolsas</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Pases</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QLineEdit" name="qlinee_CtrlEntrada_numactivo">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(255, 255, 255);</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item row="0" column="0">
+    <widget class="QLabel" name="label_17">
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:11pt;&quot;&gt;INTRODUZCA LOS DATOS DE LOS BIENES, ACTIVOS Y/O INSUMOS&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="0">
+    <widget class="Line" name="line">
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(149, 170, 190);</string>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="0">
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="2" column="1">
+      <widget class="QLineEdit" name="qlinee_CtrlEntrada_nivelexistencia">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(255, 255, 255);</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="3">
+      <widget class="QComboBox" name="cbox_CtrlEntrada_recividocalidad">
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(255, 255, 255);</string>
+       </property>
+       <item>
+        <property name="text">
+         <string>Donación</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Prestamo</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Ingreso</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Compra</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item row="4" column="1">
+      <widget class="QLineEdit" name="qlinee_CtrlEntrada_observaciones">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(255, 255, 255);</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="ql_CtrlEntrada_detalles">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(223, 223, 223);
+color: rgb(0, 0, 0);</string>
+       </property>
+       <property name="text">
+        <string> Detalles:</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="ql_CtrlEntrada_nivelexistencia">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(223, 223, 223);
+color: rgb(0, 0, 0);</string>
+       </property>
+       <property name="text">
+        <string>  Nivel Min.Existencia:</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0">
+      <widget class="QLabel" name="ql_CtrlEntrada_condicion">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(223, 223, 223);
+color: rgb(0, 0, 0);</string>
+       </property>
+       <property name="text">
+        <string>Condición:</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="2">
+      <widget class="QLabel" name="ql_CtrlEntrada_reciboencalidad">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(223, 223, 223);
+color: rgb(0, 0, 0);</string>
+       </property>
+       <property name="text">
+        <string> Recibido en Calidad: </string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="1">
+      <widget class="QComboBox" name="cbox_CtrlEntrada_recibe">
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(255, 255, 255);</string>
+       </property>
+       <item>
+        <property name="text">
+         <string>J.Almacen</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Administración</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QComboBox" name="cbox_CtrlEntrada_condicion">
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(255, 255, 255);</string>
+       </property>
+       <item>
+        <property name="text">
+         <string>Nuevo</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Buen Estado</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Detalles</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Desuso</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item row="3" column="1">
+      <widget class="QLineEdit" name="qlinee_CtrlEntrada_numguia">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(255, 255, 255);</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="0">
+      <widget class="QLabel" name="ql_CtrlEntrada_observaciones">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(223, 223, 223);
+color: rgb(0, 0, 0);</string>
+       </property>
+       <property name="text">
+        <string>Observaciónes:</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QPlainTextEdit" name="qplt_CtrlEntrada_detalles">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(255, 255, 255);</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="0">
+      <widget class="QLabel" name="ql_CtrlEntrada_numguia">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(223, 223, 223);
+color: rgb(0, 0, 0);</string>
+       </property>
+       <property name="text">
+        <string> N°Guía:</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="2">
+      <widget class="QLabel" name="ql_CtrlEntrada_ubicacion">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(223, 223, 223);
+color: rgb(0, 0, 0);</string>
+       </property>
+       <property name="text">
+        <string>Ubicación:</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="3">
+      <widget class="QComboBox" name="cbox_CtrlEntrada_ubicacion">
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(255, 255, 255);</string>
+       </property>
+       <item>
+        <property name="text">
+         <string>Almacen 1</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Almacen 2</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item row="5" column="0">
+      <widget class="QLabel" name="ql_CtrlEntrada_recibe">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(223, 223, 223);
+color: rgb(0, 0, 0);</string>
+       </property>
+       <property name="text">
+        <string>Recibe</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item row="5" column="0" alignment="Qt::AlignHCenter">
+    <widget class="QDialogButtonBox" name="buttonBox">
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{
+	color:rgb(255, 255, 255);
+	background-color: rgb(71, 93, 144);
+}
+QPushButton:hover
+{
+	border-style: solid;
+	background-color: rgb(89, 118, 181);
+}
+
+QPushButton:pressed
+{		
+	background-color: rgb(62, 82, 125);
+}</string>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="standardButtons">
+      <set>QDialogButtonBox::Close|QDialogButtonBox::Save</set>
+     </property>
+     <property name="centerButtons">
+      <bool>false</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="0">
+    <widget class="Line" name="line_2">
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(149, 170, 190);</string>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <tabstops>
+  <tabstop>cbox_CtrlEntrada_tipo</tabstop>
+  <tabstop>cbox_CtrlEntrada_sede</tabstop>
+  <tabstop>qlinee_CtrlEntrada_actnombre</tabstop>
+  <tabstop>qlinee_CtrlEntrada_numactivo</tabstop>
+  <tabstop>qlinee_CtrlEntrada_fechaingreso</tabstop>
+  <tabstop>cbox_CtrlEntrada_sede_2</tabstop>
+  <tabstop>qlinee_CtrlEntrada_cantidad</tabstop>
+  <tabstop>qlinee_CtrlEntrada_totalxunidad</tabstop>
+  <tabstop>cbox_CtrlEntrada_condicion</tabstop>
+  <tabstop>cbox_CtrlEntrada_recividocalidad</tabstop>
+  <tabstop>qplt_CtrlEntrada_detalles</tabstop>
+  <tabstop>cbox_CtrlEntrada_ubicacion</tabstop>
+  <tabstop>qlinee_CtrlEntrada_nivelexistencia</tabstop>
+  <tabstop>qlinee_CtrlEntrada_numguia</tabstop>
+  <tabstop>qlinee_CtrlEntrada_observaciones</tabstop>
+  <tabstop>cbox_CtrlEntrada_recibe</tabstop>
+ </tabstops>
+ <resources>
+  <include location="../assets/resources.qrc"/>
+ </resources>
+ <connections/>
+</ui>

@@ -1,0 +1,816 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ContrlSalida</class>
+ <widget class="QWidget" name="ContrlSalida">
+  <property name="windowModality">
+   <enum>Qt::WindowModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>634</width>
+    <height>535</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle">
+   <string>Control de Inventario (Salida)</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="../assets/resources.qrc">
+    <normaloff>:/logo_ipasme/icons/IPASME-logo-DABC2AE9B1-seeklogo.com.png</normaloff>:/logo_ipasme/icons/IPASME-logo-DABC2AE9B1-seeklogo.com.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(177, 214, 166);</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QLabel" name="ql_CtrlSalida_Titulo">
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;GENERAR/MODIFICAR ORDEN DE SALIDA DE INVENTARIO&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <layout class="QGridLayout" name="gridLayout_2">
+     <item row="0" column="4">
+      <widget class="QLabel" name="ql_CtrlSalida_numeroactivo">
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;Nombre Del Activo&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="2">
+      <widget class="QPushButton" name="bttn_CtrlSalida_numeroactivo">
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton:hover
+{
+	border-style: solid;
+	
+	background-color: rgb(195, 221, 248);
+}
+
+QPushButton:pressed
+{		
+	   	background-color: rgb(165, 188, 211);
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset resource="../assets/resources.qrc">
+         <normaloff>:/botones_ipasme/icons/search-icon.png</normaloff>:/botones_ipasme/icons/search-icon.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>16</width>
+         <height>16</height>
+        </size>
+       </property>
+       <property name="flat">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="5">
+      <widget class="QPushButton" name="bttn_CtrlSalida_nombreactivo">
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton:hover
+{
+	border-style: solid;
+	
+	background-color: rgb(195, 221, 248);
+}
+
+QPushButton:pressed
+{		
+	   	background-color: rgb(165, 188, 211);
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset resource="../assets/resources.qrc">
+         <normaloff>:/botones_ipasme/icons/search-icon.png</normaloff>:/botones_ipasme/icons/search-icon.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>16</width>
+         <height>16</height>
+        </size>
+       </property>
+       <property name="flat">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLabel" name="ql_CtrlSalida_nombreactivo">
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;N° Del Activo&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0">
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item row="0" column="6">
+      <spacer name="horizontalSpacer_3">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="Line" name="line_2">
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(149, 170, 190);</string>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QFrame" name="BodyFrame">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <item>
+       <layout class="QGridLayout" name="gridLayout">
+        <item row="1" column="0">
+         <widget class="QLabel" name="ql_CtrlSalida_tipo">
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(223, 223, 223);
+color: rgb(0, 0, 0);</string>
+          </property>
+          <property name="text">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;Tipo:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QComboBox" name="cbox_CtrlSalida_tipo">
+          <property name="cursor">
+           <cursorShape>PointingHandCursor</cursorShape>
+          </property>
+          <property name="toolTip">
+           <string>Seleccione el tipo de Activo</string>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(255, 255, 255);</string>
+          </property>
+          <property name="currentText">
+           <string extracomment="Seleccione el tipo de Activo"/>
+          </property>
+          <property name="placeholderText">
+           <string/>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="3">
+         <widget class="QLineEdit" name="qlinee_CtrlSalida_cantidad">
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(255, 255, 255);</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="2">
+         <widget class="QLabel" name="ql_CtrlSalida_cantidad">
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(223, 223, 223);
+color: rgb(0, 0, 0);</string>
+          </property>
+          <property name="text">
+           <string>Cantidad</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="QLineEdit" name="qlinee_CtrlSalida_fechaingreso">
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(255, 255, 255);</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="1">
+         <widget class="QComboBox" name="cbox_CtrlSalida_condicion">
+          <property name="cursor">
+           <cursorShape>PointingHandCursor</cursorShape>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(255, 255, 255);</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="1">
+         <widget class="QLineEdit" name="qlinee_CtrlSalida_totalunidad">
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(255, 255, 255);</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="3">
+         <widget class="QComboBox" name="cbox_CtrlSalida_sede">
+          <property name="cursor">
+           <cursorShape>PointingHandCursor</cursorShape>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(255, 255, 255);</string>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="0">
+         <widget class="QLabel" name="ql_CtrlSalida_unidadmedida">
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(223, 223, 223);
+color: rgb(0, 0, 0);</string>
+          </property>
+          <property name="text">
+           <string> Unidad de Medida: </string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="1">
+         <widget class="QComboBox" name="cbox_CtrlSalida_unidadmedida">
+          <property name="cursor">
+           <cursorShape>PointingHandCursor</cursorShape>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(255, 255, 255);</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="3">
+         <widget class="QComboBox" name="cbox_CtrlSalida_recibidocalidad">
+          <property name="cursor">
+           <cursorShape>PointingHandCursor</cursorShape>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(255, 255, 255);</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="QLabel" name="ql_CtrlSalida_fechaingreso">
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(223, 223, 223);
+color: rgb(0, 0, 0);</string>
+          </property>
+          <property name="text">
+           <string>Fecha Ingreso:</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="2">
+         <widget class="QLabel" name="ql_CtrlSalida_sede">
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(223, 223, 223);
+color: rgb(0, 0, 0);</string>
+          </property>
+          <property name="text">
+           <string>Sede:</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="0">
+         <widget class="QLabel" name="ql_CtrlSalida_totalunidad">
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(223, 223, 223);
+color: rgb(0, 0, 0);</string>
+          </property>
+          <property name="text">
+           <string>Total por Unidad:</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="0">
+         <widget class="QFrame" name="frame_3">
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="0">
+         <widget class="QLabel" name="ql_CtrlSalida_condicion">
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(223, 223, 223);
+color: rgb(0, 0, 0);</string>
+          </property>
+          <property name="text">
+           <string>Condicion:</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="2">
+         <widget class="QLabel" name="ql_CtrlSalida_recibidocalidad">
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(223, 223, 223);
+color: rgb(0, 0, 0);</string>
+          </property>
+          <property name="text">
+           <string> Recibido en Calidad: </string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QGridLayout" name="gridLayout_5">
+        <item row="8" column="0">
+         <widget class="QLabel" name="ql_CtrlSalida_ubicacion_2">
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(223, 223, 223);
+color: rgb(0, 0, 0);</string>
+          </property>
+          <property name="text">
+           <string>Ubicacion</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="9" column="3">
+         <widget class="QLineEdit" name="qlinee_CtrlSalida_recibe">
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(255, 255, 255);</string>
+          </property>
+         </widget>
+        </item>
+        <item row="9" column="0">
+         <widget class="QLabel" name="ql_CtrlSalida_numguia">
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(223, 223, 223);
+color: rgb(0, 0, 0);</string>
+          </property>
+          <property name="text">
+           <string> N° De Guía </string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="9" column="2">
+         <widget class="QLabel" name="ql_CtrlSalida_recibe">
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(223, 223, 223);
+color: rgb(0, 0, 0);</string>
+          </property>
+          <property name="text">
+           <string>Recibe</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="8" column="2">
+         <widget class="QLabel" name="ql_CtrlSalida_existencia">
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(223, 223, 223);
+color: rgb(0, 0, 0);</string>
+          </property>
+          <property name="text">
+           <string> Existencia </string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="8" column="3">
+         <widget class="QLineEdit" name="qlinee_CtrlSalida_existencia">
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(255, 255, 255);</string>
+          </property>
+         </widget>
+        </item>
+        <item row="9" column="1">
+         <widget class="QLineEdit" name="qlinee_CtrlSalida_nguia">
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(255, 255, 255);</string>
+          </property>
+         </widget>
+        </item>
+        <item row="10" column="0">
+         <widget class="QLabel" name="ql_CtrlSalida_observacion">
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(223, 223, 223);
+color: rgb(0, 0, 0);</string>
+          </property>
+          <property name="text">
+           <string>  Observacion  </string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="8" column="1">
+         <widget class="QComboBox" name="cbox_CtrlSalida_ubicacion">
+          <property name="cursor">
+           <cursorShape>PointingHandCursor</cursorShape>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(255, 255, 255);</string>
+          </property>
+         </widget>
+        </item>
+        <item row="7" column="0">
+         <widget class="QLabel" name="ql_CtrlSalida_detalles">
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(223, 223, 223);
+color: rgb(0, 0, 0);</string>
+          </property>
+          <property name="text">
+           <string>  Detalles  </string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="7" column="1">
+         <widget class="QLineEdit" name="lineEdit">
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(255, 255, 255);</string>
+          </property>
+         </widget>
+        </item>
+        <item row="10" column="1">
+         <widget class="QLineEdit" name="lineEdit_2">
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(255, 255, 255);</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="Line" name="line">
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(149, 170, 190);</string>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QFrame" name="FooterFrame">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <layout class="QGridLayout" name="gridLayout_3">
+        <item row="4" column="3">
+         <widget class="QComboBox" name="cbox_CtrlSalida_firma">
+          <property name="cursor">
+           <cursorShape>PointingHandCursor</cursorShape>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(255, 255, 255);</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="ql_CtrlSalida_motivo">
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(223, 223, 223);
+color: rgb(0, 0, 0);</string>
+          </property>
+          <property name="text">
+           <string>Motivo</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QComboBox" name="cbox_CtrlSalida_motivo">
+          <property name="cursor">
+           <cursorShape>PointingHandCursor</cursorShape>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(255, 255, 255);</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="QLineEdit" name="qlinee_CtrlSalida_fechaegreso">
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(255, 255, 255);</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="QLabel" name="ql_CtrlSalida_fechaegreso">
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(223, 223, 223);
+color: rgb(0, 0, 0);</string>
+          </property>
+          <property name="text">
+           <string> Fecha de Engreso </string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="2">
+         <widget class="QLabel" name="ql_CtrlSalida_firmar">
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(223, 223, 223);
+color: rgb(0, 0, 0);</string>
+          </property>
+          <property name="text">
+           <string>  Firmar: </string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="0">
+         <widget class="QLabel" name="ql_CtrlSalida_actualizadopor">
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(223, 223, 223);
+color: rgb(0, 0, 0);</string>
+          </property>
+          <property name="text">
+           <string>Actualizado por:</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="0">
+         <widget class="QLabel" name="ql_CtrlSalida_egreso">
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(223, 223, 223);
+color: rgb(0, 0, 0);</string>
+          </property>
+          <property name="text">
+           <string>Egreso:</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="1">
+         <widget class="QLineEdit" name="qlinee_CtrlSalida_salidacantidad">
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(255, 255, 255);</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="0">
+         <widget class="QLabel" name="ql_CtrlSalida_salidacantidad">
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(223, 223, 223);
+color: rgb(0, 0, 0);</string>
+          </property>
+          <property name="text">
+           <string>Salida Cantidad</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="1">
+         <widget class="QComboBox" name="cbox_CtrlSalida_actualizadopor">
+          <property name="cursor">
+           <cursorShape>PointingHandCursor</cursorShape>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(255, 255, 255);</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QFrame" name="ButtonFrame">
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout_4">
+      <item>
+       <widget class="QPushButton" name="pushButton">
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton{
+	color:rgb(255, 255, 255);
+	background-color: rgb(71, 93, 144);
+}
+QPushButton:hover
+{
+	border-style: solid;
+	background-color: rgb(89, 118, 181);
+}
+
+QPushButton:pressed
+{		
+	background-color: rgb(62, 82, 125);
+}</string>
+        </property>
+        <property name="text">
+         <string>Egresar</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_2">
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton{
+	color:rgb(255, 255, 255);
+	background-color: rgb(71, 93, 144);
+}
+QPushButton:hover
+{
+	border-style: solid;
+	background-color: rgb(89, 118, 181);
+}
+
+QPushButton:pressed
+{		
+	background-color: rgb(62, 82, 125);
+}</string>
+        </property>
+        <property name="text">
+         <string>Modificar/Grabar</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_3">
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton{
+	color:rgb(255, 255, 255);
+	background-color: rgb(71, 93, 144);
+}
+QPushButton:hover
+{
+	border-style: solid;
+	background-color: rgb(89, 118, 181);
+}
+
+QPushButton:pressed
+{		
+	background-color: rgb(62, 82, 125);
+}</string>
+        </property>
+        <property name="text">
+         <string>Salir</string>
+        </property>
+        <property name="flat">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <tabstops>
+  <tabstop>bttn_CtrlSalida_numeroactivo</tabstop>
+  <tabstop>bttn_CtrlSalida_nombreactivo</tabstop>
+  <tabstop>cbox_CtrlSalida_tipo</tabstop>
+  <tabstop>cbox_CtrlSalida_sede</tabstop>
+  <tabstop>qlinee_CtrlSalida_fechaingreso</tabstop>
+  <tabstop>qlinee_CtrlSalida_totalunidad</tabstop>
+  <tabstop>qlinee_CtrlSalida_cantidad</tabstop>
+  <tabstop>cbox_CtrlSalida_condicion</tabstop>
+  <tabstop>cbox_CtrlSalida_recibidocalidad</tabstop>
+  <tabstop>cbox_CtrlSalida_unidadmedida</tabstop>
+  <tabstop>cbox_CtrlSalida_ubicacion</tabstop>
+  <tabstop>qlinee_CtrlSalida_existencia</tabstop>
+  <tabstop>qlinee_CtrlSalida_nguia</tabstop>
+  <tabstop>qlinee_CtrlSalida_recibe</tabstop>
+  <tabstop>cbox_CtrlSalida_motivo</tabstop>
+  <tabstop>qlinee_CtrlSalida_fechaegreso</tabstop>
+  <tabstop>qlinee_CtrlSalida_salidacantidad</tabstop>
+  <tabstop>cbox_CtrlSalida_actualizadopor</tabstop>
+  <tabstop>cbox_CtrlSalida_firma</tabstop>
+  <tabstop>pushButton</tabstop>
+  <tabstop>pushButton_2</tabstop>
+  <tabstop>pushButton_3</tabstop>
+ </tabstops>
+ <resources>
+  <include location="../assets/resources.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>pushButton_3</sender>
+   <signal>clicked()</signal>
+   <receiver>ContrlSalida</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>616</x>
+     <y>647</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>646</x>
+     <y>541</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

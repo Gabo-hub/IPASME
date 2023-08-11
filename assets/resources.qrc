@@ -1,0 +1,18 @@
+<RCC>
+  <qresource prefix="logo_ipasme">
+    <file>icons/7192de9b3edb2bbe - copia.png</file>
+    <file>icons/7192de9b3edb2bbe.png</file>
+    <file>icons/IPASME-logo-DABC2AE9B1-seeklogo.com.png</file>
+  </qresource>
+  <qresource prefix="botones_ipasme">
+    <file>icons/images.png</file>
+    <file>icons/descarga.png</file>
+    <file>icons/person.png</file>
+    <file>icons/imprimir.png</file>
+    <file>icons/cerrar-icon.png</file>
+    <file>icons/search-icon.png</file>
+  </qresource>
+  <qresource prefix="logo_mercuryweb">
+    <file>icons/mercury-icon.png</file>
+  </qresource>
+</RCC>

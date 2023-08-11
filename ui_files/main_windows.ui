@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>903</width>
+    <height>570</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle">
+   <string>IPASME</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="../assets/resources.qrc">
+    <normaloff>:/logo_ipasme/icons/IPASME-logo-DABC2AE9B1-seeklogo.com.png</normaloff>:/logo_ipasme/icons/IPASME-logo-DABC2AE9B1-seeklogo.com.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(94, 133, 185);</string>
+  </property>
+  <property name="animated">
+   <bool>true</bool>
+  </property>
+  <property name="documentMode">
+   <bool>false</bool>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <layout class="QGridLayout" name="gridLayout">
+      <item row="1" column="1">
+       <widget class="QLabel" name="label">
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/logo_ipasme/icons/7192de9b3edb2bbe.png&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <spacer name="verticalSpacer_2">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>40</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item row="0" column="1">
+       <spacer name="verticalSpacer">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>40</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item row="1" column="2">
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item row="1" column="0">
+       <spacer name="horizontalSpacer_2">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QFrame" name="frame">
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <spacer name="horizontalSpacer_3">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset resource="../assets/resources.qrc">
+           <normaloff>:/logo_mercuryweb/icons/mercury-icon.png</normaloff>
+           <disabledoff>:/logo_mercuryweb/icons/mercury-icon.png</disabledoff>:/logo_mercuryweb/icons/mercury-icon.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>132</width>
+           <height>37</height>
+          </size>
+         </property>
+         <property name="flat">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>903</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(164, 186, 209);</string>
+   </property>
+   <widget class="QMenu" name="menuIPASME">
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="title">
+     <string>IPASME</string>
+    </property>
+    <addaction name="actionGenerar_Respaldo"/>
+    <addaction name="actionCambio_Usuario"/>
+    <addaction name="separator"/>
+    <addaction name="actionAdmin_Perfil"/>
+    <addaction name="actionSalir"/>
+   </widget>
+   <widget class="QMenu" name="menuAFILIADO">
+    <property name="title">
+     <string>AFILIADO</string>
+    </property>
+    <addaction name="actionRegistro"/>
+    <addaction name="actionModificar"/>
+    <addaction name="separator"/>
+    <addaction name="actionCulminar_Afil_2"/>
+    <addaction name="actionReportes"/>
+   </widget>
+   <widget class="QMenu" name="menuFARMACIA">
+    <property name="title">
+     <string>FARMACIA</string>
+    </property>
+    <addaction name="actionEntrega_Medicina"/>
+    <addaction name="actionIngreso_de_Medicina"/>
+    <addaction name="separator"/>
+    <addaction name="actionReporte_de_Entrega"/>
+    <addaction name="actionReporte_de_Ingreso"/>
+   </widget>
+   <widget class="QMenu" name="menuINVENTARIO">
+    <property name="title">
+     <string>INVENTARIO</string>
+    </property>
+    <addaction name="actionEntrada_de_Inventario"/>
+    <addaction name="actionOrden_de_Salida"/>
+    <addaction name="actionActualizar_Inventario"/>
+    <addaction name="separator"/>
+    <addaction name="actionReporte"/>
+   </widget>
+   <widget class="QMenu" name="menuBENEFICIOS">
+    <property name="title">
+     <string>BENEFICIOS</string>
+    </property>
+    <addaction name="actionCreditos_H"/>
+    <addaction name="actionParto_Humanitario"/>
+    <addaction name="actionCitas_Odontologicas"/>
+    <addaction name="separator"/>
+    <addaction name="actionReportes_2"/>
+   </widget>
+   <widget class="QMenu" name="menuAYUDA">
+    <property name="title">
+     <string>AYUDA</string>
+    </property>
+    <addaction name="actionAyuda"/>
+    <addaction name="actionAcerca_de"/>
+   </widget>
+   <addaction name="menuIPASME"/>
+   <addaction name="menuAFILIADO"/>
+   <addaction name="menuFARMACIA"/>
+   <addaction name="menuINVENTARIO"/>
+   <addaction name="menuBENEFICIOS"/>
+   <addaction name="menuAYUDA"/>
+  </widget>
+  <action name="actionGenerar_Respaldo">
+   <property name="text">
+    <string>Generar Respaldo</string>
+   </property>
+  </action>
+  <action name="actionCambio_Usuario">
+   <property name="text">
+    <string>Cambio Usuario</string>
+   </property>
+  </action>
+  <action name="actionAdmin_Perfil">
+   <property name="text">
+    <string>Administrar Perfil</string>
+   </property>
+  </action>
+  <action name="actionSalir">
+   <property name="text">
+    <string>Salir</string>
+   </property>
+  </action>
+  <action name="actionRegistro">
+   <property name="text">
+    <string>Registro</string>
+   </property>
+  </action>
+  <action name="actionModificar">
+   <property name="text">
+    <string>Modificar</string>
+   </property>
+  </action>
+  <action name="actionCulminar_Afil">
+   <property name="text">
+    <string>Culminar Afil</string>
+   </property>
+  </action>
+  <action name="actionCulminar_Afil_2">
+   <property name="text">
+    <string>Culminar Afil</string>
+   </property>
+  </action>
+  <action name="actionReportes">
+   <property name="text">
+    <string>Reportes</string>
+   </property>
+  </action>
+  <action name="actionEntrega_Medicina">
+   <property name="text">
+    <string>Entrega Medicina</string>
+   </property>
+  </action>
+  <action name="actionIngreso_de_Medicina">
+   <property name="text">
+    <string>Ingreso de Medicina</string>
+   </property>
+  </action>
+  <action name="actionReportes_de_Entrega">
+   <property name="text">
+    <string>Reportes de Entrega</string>
+   </property>
+  </action>
+  <action name="actionReporte_de_Entrega">
+   <property name="text">
+    <string>Reporte de Entrega</string>
+   </property>
+  </action>
+  <action name="actionReporte_de_Ingreso">
+   <property name="text">
+    <string>Reporte de Ingreso</string>
+   </property>
+  </action>
+  <action name="actionEntrada_de_Inventario">
+   <property name="text">
+    <string>Entrada de Inventario</string>
+   </property>
+  </action>
+  <action name="actionOrden_de_Salida">
+   <property name="text">
+    <string>Orden de Salida</string>
+   </property>
+  </action>
+  <action name="actionActualizar_Inventario">
+   <property name="text">
+    <string>Actualizar Inventario</string>
+   </property>
+  </action>
+  <action name="actionReporte">
+   <property name="text">
+    <string>Reporte</string>
+   </property>
+  </action>
+  <action name="actionCreditos_H">
+   <property name="text">
+    <string>Creditos H</string>
+   </property>
+  </action>
+  <action name="actionParto_Humanitario">
+   <property name="text">
+    <string>Parto H</string>
+   </property>
+  </action>
+  <action name="actionCitas_Odontologicas">
+   <property name="text">
+    <string>Citas Odontológicas</string>
+   </property>
+  </action>
+  <action name="actionReportes_2">
+   <property name="text">
+    <string>Reportes</string>
+   </property>
+  </action>
+  <action name="actionAyuda">
+   <property name="text">
+    <string>Ayuda</string>
+   </property>
+  </action>
+  <action name="actionAcerca_de">
+   <property name="text">
+    <string>Acerca de</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="../assets/resources.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>actionSalir</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>390</x>
+     <y>275</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
